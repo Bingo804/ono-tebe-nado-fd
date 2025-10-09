@@ -43,6 +43,7 @@
 
 .cover {
     background-image: url(../images/cover.jpg);
+    background-position: center; /* исправлено позиционирование*/
     background-size:cover;
     background-repeat: no-repeat;
     min-height: 757px;
@@ -57,17 +58,19 @@
 }
 
 .cover__title {
-    font-style: bold;
-    font-size: 100px;
+    font-size: 100px; /*Убрал свойство font-style так как было применено не корректно*/
     text-transform: uppercase;
     color: #FFFFFF;
     font-weight: 700;
     margin-top: 164px;
-    
+    margin-bottom: 102px; /*перенес свойство из .aligned-text_right*/
 }
+
 .aligned-text {
     display: block;
+    text-transform: uppercase;
 }
+
 .aligned-text_left {
     text-align: left;
     margin-left: 50px;
@@ -83,7 +86,6 @@
 }
 .aligned-text_right {
     text-align: right;
-    margin-bottom: 102px;
     margin-right: 45px;
     letter-spacing: 4px;
 }
@@ -128,14 +130,13 @@
     font-size: 40px;
     text-transform: uppercase;
     margin-left: 40px;
-    margin-bottom: 26px;
+    margin-bottom: 26px; /*перенес свойство для всего списка*/
 }
 
 .lots__card-list-item {
     width: 334px;
     min-height: 596px;
     list-style: none;
-    margin-bottom: 30px;
 }
 
 .card-link,
@@ -152,6 +153,8 @@
     align-items: center;
     padding: 48px 40px;
     justify-content: space-between;
+    background-size: cover;
+    background-repeat: no-repeat; /*перенес свойства, чтобы не прописывать нескольк раз*/
 }
 
 .lots__card-list {
@@ -159,6 +162,7 @@
     flex-direction: row;
     gap: 25px;
     flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .card-link {
@@ -182,20 +186,14 @@
 
 .card_type_film {
     background-image: url(../images/card-lot-01.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .card_type_book {
     background-image: url(../images/card-lot-02.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .card_type_picture {
     background-image: url(../images/card-lot-03.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .lots__look-more-link {
